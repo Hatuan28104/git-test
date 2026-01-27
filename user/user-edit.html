@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit User</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Layout chung -->
+  <link rel="stylesheet" href="../layout/layout.css" />
+
+  <!-- User CSS dùng chung -->
+  <link rel="stylesheet" href="./user.css" />
+</head>
+
+<body data-page="user-edit">
+  <div class="layout">
+    <div id="sidebar"></div>
+
+    <div class="main">
+      <div id="header"></div>
+
+      <main class="content users-page">
+
+        <!-- HEADER -->
+        <div class="detail-header">
+          <a href="./user.html" class="back-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </a>
+          <h1>Edit User</h1>
+        </div>
+
+        <!-- CARD -->
+        <div class="detail-card">
+
+          <!-- AVATAR -->
+          <div class="edit-avatar">
+            <img
+              id="avatarPreview"
+              src="../assets/images/avatar-default.png"
+              alt="Avatar"
+            />
+
+            <!-- input file ẩn -->
+            <input
+              type="file"
+              id="avatarInput"
+              accept="image/*"
+              hidden
+            />
+
+            <button
+              type="button"
+              class="btn-outline"
+              id="btnChangeAvatar"
+            >
+              Change avatar
+            </button>
+          </div>
+          <!-- ABOUT -->
+          <div class="block">
+            <label>About you:</label>
+            <textarea placeholder="Tell us about the care and support needs..."></textarea>
+          </div>
+
+          <!-- LOOKING FOR -->
+          <div class="block">
+            <label>Looking for:</label>
+            <textarea placeholder="Describe your expectations..."></textarea>
+          </div>
+
+          <!-- BASIC INFO -->
+          <div class="block">
+            <h3>Information</h3>
+            <p class="sub">Basic Information</p>
+
+            <div class="form-item">
+              <label>Full Name</label>
+              <input value="Nguyen Thi Mai" />
+            </div>
+
+            <div class="form-item">
+              <label>Date of Birth</label>
+              <input type="date" value="1952-10-28" />
+            </div>
+
+            <div class="form-item">
+              <label>Gender</label>
+              <select>
+                <option selected>Female</option>
+                <option>Male</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <label>Height</label>
+              <input value="1m60" />
+            </div>
+
+            <div class="form-item">
+              <label>Weight</label>
+              <input value="45kg" />
+            </div>
+          </div>
+
+          <!-- CONTACT INFO -->
+          <div class="block">
+            <p class="sub">Contact Information</p>
+
+            <div class="form-item">
+              <label>Phone Number</label>
+              <input value="(+84) 123 456 789" />
+            </div>
+
+            <div class="form-item">
+              <label>Email</label>
+              <input value="mainguyen@email.com" />
+            </div>
+
+            <div class="form-item">
+              <label>Address</label>
+              <input value="123 Le Loi Street, Ho Chi Minh City" />
+            </div>
+          </div>
+          <!-- ACTIONS -->
+            <div class="form-actions">
+            <button class="btn-save">Save</button>
+            <button type="button" class="btn-cancel">Cancel</button>
+            </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+  <div id="popup"></div>
+  <script src="../layout/layout.js"></script>
+  <script src="./user.js"></script>
+</body>
+</html>
