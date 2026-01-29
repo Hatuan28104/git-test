@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chỉnh sửa nhân vật số</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="../layout/layout.css" />
+  <link rel="stylesheet" href="./digital.css" />
+</head>
+
+<body data-page="digital-edit" class="digital-page">
+<div class="layout">
+
+  <div id="sidebar"></div>
+
+  <div class="main">
+    <div id="header"></div>
+
+    <main class="content">
+
+      <div class="page-back" id="btnBack">
+        <i class="fa-solid fa-chevron-left"></i>
+        <h1>Chỉnh sửa nhân vật số</h1>
+      </div>
+
+      <div class="form-card">
+
+        <div class="form-grid">
+          <div class="form-item">
+            <label>Mã <span>*</span></label>
+            <input type="text" value="DH01" disabled />
+          </div>
+
+          <div class="form-item">
+            <label>Tên <span>*</span></label>
+            <input type="text" value="Luna" />
+          </div>
+
+          <div class="form-item">
+            <label>Giới tính <span>*</span></label>
+            <select>
+              <option>Nam</option>
+              <option selected>Nữ</option>
+            </select>
+          </div>
+
+          <div class="form-item">
+            <label>Nghề nghiệp <span>*</span></label>
+            <input type="text" value="Y tá" />
+          </div>
+        </div>
+
+        <div class="form-item full">
+          <label>Ngoại hình <span>*</span></label>
+          <textarea>
+Cô là một y tá trẻ khoảng 25 tuổi, mặc đồng phục bệnh viện gọn gàng và sạch sẽ. Cô có nụ cười tươi tắn, thân thiện, tạo cảm giác tin cậy và thoải mái. Ngoại hình toát lên vật dịu dàng, tận tâm và nguồn năng lượng tích cực.
+          </textarea>
+        </div>
+
+        <div class="form-item full">
+          <label>Mô tả chi tiết <span>*</span></label>
+          <textarea>
+Vai trò này cung cấp hướng dẫn chăm sóc cá nhân hoá theo nhu cầu của từng bệnh nhân, bao gồm nhắc nhở uống thuốc nhằm đảm bảo sử dụng đúng thời điểm và an toàn. Đồng thời, hệ thống hỗ trợ theo dõi sức khỏe hằng ngày để duy trì thể trạng và phát hiện sớm các dấu hiệu bất thường. Mục tiêu là giúp người dùng quản lý sức khỏe một cách chủ động và hiệu quả.
+          </textarea>
+        </div>
+
+        <!-- AVATAR -->
+        <div class="form-item full">
+          <label>Ảnh đại diện <span>*</span></label>
+          <div class="upload-box" id="avatarBox">
+            <img
+              id="avatarPreview"
+              class="preview-avatar hidden"
+              alt="Xem trước ảnh đại diện"
+            />
+
+            <i class="fa-solid fa-cloud-arrow-up" id="uploadIcon"></i>
+
+            <p id="uploadText">Nhấn để tải lên hoặc kéo & thả</p>
+
+            <button
+              type="button"
+              class="remove-avatar hidden"
+              id="btnRemoveAvatar"
+            >
+              Xóa ảnh
+            </button>
+          </div>
+
+          <input
+            type="file"
+            id="avatarInput"
+            accept="image/*"
+            hidden
+          />
+        </div>
+
+        <div class="form-actions">
+          <button class="btn-save" id="btnSave">Lưu</button>
+          <button class="btn-cancel" id="btnCancel">Hủy</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div id="popup"></div>
+
+<script src="../layout/layout.js"></script>
+<script src="./digital.js"></script>
+</body>
+</html>
